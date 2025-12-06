@@ -1,13 +1,20 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-void removeDuplicates(int arr[],int n){
-  set<int> new_arr;
-  for (int i = 0; i < n;i++){
-    new_arr.insert(arr[i]);
-  }
-  int size = new_arr.size();
-  for(auto it = new_arr.begin();it != neq_arr.end(); ++it){
-        
+int removeDuplicates(vector <int> &nums){
+  int pn =0;
+  for(int i=1;i<nums.size();i++){
+    if(nums[i]!=nums[pn]){
+      pn++;
+      nums[pn] = nums[i];
     }
+  }
+  return pn+1;
+}
+
+int main(){
+  vector<int> nums = {1, 1, 2};
+  int result = removeDuplicates(nums);
+  cout << result;
+
 }

@@ -4,6 +4,7 @@ using namespace std;
 
 class Solution {
 public:
+    //Two-Pointer Method
     bool IsAlphaNum(char ch){
         if ( (ch >= '0' && ch <= '9') || (tolower(ch) >= 'a' && tolower(ch) <= 'z') ) {
     return true;
@@ -27,7 +28,18 @@ public:
             st++; end--;
         }
         return true;
-    } 
+    }
+    // // Intitution Method
+    // bool isPalindrome(string s){
+    //     string newStr = "";
+    //     for(char c: s){
+    //         if(isalnum(c)){
+    //             newStr += tolower(c);
+    //         }
+    //     }
+    //     return newStr == string(newStr.rbegin(), newStr.rend());
+    // }
+
 };
 
 int main(){
